@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="#" class="nav-link px-2 text-secondary"><i class="bi bi-house-door-fill"></i>Home</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Login</button>
+             
+              <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-whatever="@getbootstrap">Sign up</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--login-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Username:</label>
+                  <input type="text" class="form-control" id="recipient-name" placeholder="Enter your Email">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Password:</label>
+                  <textarea class="form-control" id="message-text" placeholder="Password"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+            <!--Sign up-->
+            <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="signupModalLabel">Sign Up</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="signupForm">
+                        <!-- Full Name -->
+                        <div class="mb-3">
+                          <label for="full-name" class="col-form-label">Full Name:</label>
+                          <input type="text" class="form-control" id="full-name" required>
+                        </div>
+              
+                        <!-- Email -->
+                        <div class="mb-3">
+                          <label for="email" class="col-form-label">Email Address:</label>
+                          <input type="email" class="form-control" id="email" required>
+                        </div>
+              
+                        <!-- Password -->
+                        <div class="mb-3">
+                          <label for="password" class="col-form-label">Password:</label>
+                          <input type="password" class="form-control" id="password" required>
+                        </div>
+              
+                        <!-- Confirm Password -->
+                        <div class="mb-3">
+                          <label for="confirm-password" class="col-form-label">Confirm Password:</label>
+                          <input type="password" class="form-control" id="confirm-password" required>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="signupBtn">Sign Up</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                 <!-- Carousel -->
+                 <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="image/caro5.webp" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5 style="text-align: left; font-size: 32px; margin-bottom: 180px;">OPPO F25 Pro 5G</h5>
+                        
+                          
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="image/caro 2.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5  style="text-align: left; font-size: 32px; margin-bottom: 180px;">OPPO A35 Pro</h5>
+                          
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="image/caro 3.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5  style="text-align: left; font-size: 32px; margin-bottom: 180px;">OPPO F21s Pro 5G</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div> 
+                  <!--Heros-->
+                  <div class="container col-xxl-8 px-4 py-5">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                      <div class="col-10 col-sm-8 col-lg-6">
+                        <img src="image/F21s-Pro-5G_Gold_1.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                      </div>
+                      <div class="col-lg-6">
+                        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Oppo F21s Pro 5G </h1> <br><h2> A Stylish Mid-Ranger with Impressive Camera Capabilities</h2>
+                        <p class="lead">Overall, the Oppo F21s Pro 5G is a solid mid-range smartphone with a good camera setup, decent performance, and a stylish design. It's a good choice for users who are looking for a phone with a good camera and a long-lasting battery.</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Read more</button>
+                          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Features-->
+                  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                    <div class="col">
+                      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('image/feature\ 1.webp'); background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                          <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                              <img src="image/feature 1.webp" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('image/feature\ 2.webp');background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                         
+                          <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                              <img src="image/i phone2.webp" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('image/feature\ 3.webp'); background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"> A little gift, a whole lot of joy. Enjoy your new phone!</h3>
+                          <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                              <img src="image/F21s-Pro-5G_Gold_1.webp" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--car features-->
+                  <div class="section-header px-4 py-5 my-5 text-center text-bg-dark">
+  <h6 text-body-secondary>Checkout the Featured Mobiles</h6>
+  <h1>Featured </h1>
+</div>
+                  <!--Card-->
+                  <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                  <div class="card" style="width: 18rem;">
+                    <img src="image/F21s-Pro-5G_Gold_1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Oppo F21s pro 5G</h5>
+                      <h5>₹20,999 <span><del style="color: gray;">₹25,999 </del></span> </h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>  Buy Now</a>
+                      <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-plus"></i> Add to Card</a>
+                    </div>
+                  </div>
+                </div>
+                <!--1-->
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                    <div class="card" style="width: 18rem;">
+                      <img src="image/images.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Redmi Note 11 Pro 5G </h5>
+                        <h5>₹19,999 <span><del style="color: gray;">₹23,999 </del></span> </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-shopping"></i> Buy Now</a>
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i> Add to Card</a>
+                      </div>
+                    </div>
+                  </div>
+                   <!--2-->
+                   <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                    <div class="card" style="width: 18rem;">
+                      <img src="image/vivo x100.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Vivo X100</h5>
+                        <h5>₹25,999 <span><del style="color: gray;">₹27,999 </del></span> </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-shopping"></i> Buy Now</a>
+                        <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-plus"></i> Add to Card</a>
+                      </div>
+                    </div>
+                  </div>
+                    <!--3-->
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                        <div class="card" style="width: 18rem;">
+                          <img src="image/Realme 13 5G.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Realme 13 5G</h5>
+                            <h5>₹19,999 <span><del style="color: gray;">₹23,999 </del></span> </h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-shopping"></i> Buy Now</a>
+                            <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-plus"></i> Add to Card</a>
+                          </div>
+                        </div>
+                      </div>
+                     <!--4-->
+                     <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                        <div class="card" style="width: 18rem;">
+                          <img src="image/Nokia C32.webp" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Nokia C32</h5>
+                            <h5>₹7,999 <span><del style="color: gray;">₹9,999 </del></span> </h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-shopping"></i> Buy Now</a>
+                            <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-plus"></i> Add to Card</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--5-->
+                      <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                        <div class="card" style="width: 18rem;">
+                          <img src="image/poco f5.webp" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Poco F5 5G</h5>
+                            <h5>₹21,999 <span><del style="color: gray;">₹23,999 </del></span> </h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-shopping"></i> Buy Now</a>
+                            <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-plus"></i> Add to Card</a>
+                          </div>
+                        </div>
+                      </div>
+                       <!--6-->
+                       <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                        <div class="card" style="width: 18rem;">
+                          <img src="image/Moto G200 5G.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Moto G34 5G</h5>
+                            <h5>₹25,999 <span><del style="color: gray;">₹27,999 </del></span> </h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-shopping"></i> Buy Now</a>
+                            <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-plus"></i> Add to Card</a>
+                          </div>
+                        </div>
+                      </div>
+                        <!--7-->
+                        <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                            <div class="card" style="width: 18rem;">
+                              <img src="image/Xiaomi 12 Pro 5G.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Xiaomi 12 pro 5G</h5>
+                                <h5>₹27,999 <span><del style="color: gray;">₹29,999 </del></span> </h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-shopping"></i> Buy Now</a>
+                                <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-plus"></i> Add to Card</a>
+                              </div>
+                            </div>
+                          </div>
+                         <!--8-->
+                         <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                            <div class="card" style="width: 18rem;">
+                              <img src="image/Huawei Mate 40 Pro 5G.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Huawei Mate 40 Pro 5G</h5>
+                                <h5>₹25,999 <span><del style="color: gray;">₹28,999 </del></span> </h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-shopping"></i> Buy Now</a>
+                                <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-plus"></i> Add to Card</a>
+                              </div>
+                            </div>
+                          </div>
+                          <!--9-->
+                          <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                            <div class="card" style="width: 18rem;">
+                              <img src="image/Samsung galaxy A75 5G.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Samsung Galaxy A73 5G</h5>
+                                <h5>₹35,999 <span><del style="color: gray;">₹39,999 </del></span> </h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-shopping"></i> Buy Now</a>
+                                <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-plus"></i> Add to Card</a>
+                              </div>
+                            </div>
+                          </div>
+                           <!--10--->
+                           <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                            <div class="card" style="width: 18rem;">
+                              <img src="image/F21s-Pro-5G_Gold_1.webp" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Samsung Galaxy S22 Ultra</h5>
+                                <h5>₹45,999 <span><del style="color: gray;">₹50,999 </del></span> </h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-shopping"></i> Buy Now</a>
+                                <a href="#" class="btn btn-primary"> <i class="fa-solid fa-cart-plus"></i> Add to Card</a>
+                              </div>
+                            </div>
+                          </div>
+                            <!--11-->
+                            <div class="col-sm-6 col-md-4 col-lg-4 col-xxl-3 my-5">
+
+                                <div class="card" style="width: 18rem;">
+                                  <img src="image/jiophone.png" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Jio Phone</h5>
+                                    <h5>₹1,999 <span><del style="color: gray;">₹2,999 </del></span> </h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary "><i class="fa-solid fa-cart-shopping"></i> Buy Now </a>
+                                    <a href="#" class="btn btn-primary "><i class="fa-solid fa-cart-plus"></i> Add to Card </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--Accordian-->
+                              <div class="section-header  text-left text-bg-dark">
+                            <h3>FAQ</h3>
+                              </div>
+                              <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                      1. What are expandable/collapsible sections on Oppo devices?
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body"> On Oppo devices, expandable and collapsible sections allow users to manage information more efficiently by hiding or showing extra content. For example, in the settings or apps like contacts or messages, you might see categories or submenus that can be tapped to expand or collapse, helping to keep the interface organized and clean.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                      2. How can I use expandable menus in the settings of my Oppo phone?
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">In the settings menu on Oppo phones running ColorOS, you will find categories like Wi-Fi, Display, Bluetooth, and more. Tapping on any of these categories will reveal additional settings or options. Some settings can be collapsed again to simplify the interface and reduce clutter.</div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                      3. How do I quickly access hidden options or sections on Oppo?
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body"> On Oppo devices, swipe down on the screen to access Quick Settings (Wi-Fi, Bluetooth, brightness, etc.), where you’ll find several options that can be expanded or collapsed. In apps, if there’s hidden content or options, look for a small arrow or bar next to the section header to reveal additional settings or information.</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--Footer-->
+                                <div class="section-header  text-left text-bg-dark">
+                            <h3>Footer</h3>
+                              </div>
+                              <footer class="py-5 ">
+                                <div class="row">
+                                  <div class="col-6 col-md-2 mb-3 ">
+                                    <h5>Smartphones</h5>
+                                    <ul class="nav flex-column ">
+                                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">OPPO Find N3 Flip</a></li>
+                                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">OPPO Find N2 Flip</a></li>
+                                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">OPPO Reno12 Pro 5G</a></li>
+                                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">OPPO Reno12 5G</a></li>
+                                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">OPPO F27 Pro+ 5G </a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">OPPO Reno12 5G</a></li>
+                                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">OPPO F27 5G</a></li>
+                                    </ul>
+                                  </div>
+            
+                                  <div class="col-6 col-md-2 mb-3">
+                                    <h5>About OPPO</h5>
+                                    <ul class="nav flex-column">
+                                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our Story</a></li>
+                                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Technology</a></li>
+                                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Newsroom</a></li>
+                                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Campaign</a></li>
+                                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Career</a></li>
+                                    </ul>
+                                  </div>
+                            
+                                  <div class="col-6 col-md-2 mb-3">
+                                    <h5>CONTACT</h5>
+                                    <ul class="nav flex-column">
+                                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-solid fa-location-dot"></i> 4/1146,Aranmanai Street,Namakkal-623504</a></li>
+                                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-solid fa-envelope"></i> ruban23@gmail.com</a></li>
+                                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> <i class="fa-solid fa-phone"></i> 8056662265</a></li>
+                                      
+                                    </ul>
+                                  </div>
+                            
+                                  <div class="col-md-5 offset-md-1 mb-3 ">
+                                    <form>
+                                      <h5>Subscribe to our newsletter</h5>
+                                      <p>Monthly digest of what's new and exciting from us.</p>
+                                      <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                                        <button class="btn btn-primary" type="button">Subscribe</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                            
+                                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top ">
+                                  <p>© 2024 Company, Inc. All rights reserved.</p>
+                                  <ul class="list-unstyled d-flex">
+                                    <a href="#"><i class="fa-brands fa-facebook" style="color: black; font-size: 25px; padding: 10px; " ></i></a>
+                                    <a href="#"><i class="fa-brands fa-x-twitter" style="color: black; font-size: 25px;  padding: 10px; " ></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram" style="color: black; font-size: 25px;  padding: 10px; " ></i></a>
+                                  </ul>
+                                </div>
+                                
+                              </footer>
+                            
+                        
+              
+           
+            
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
